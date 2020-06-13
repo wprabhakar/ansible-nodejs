@@ -18,6 +18,9 @@ ngnix config based on repo changes.
 
 ##
  ```sh
+  # install ansible
+  sudo yum install epel-release -y
+  sudo yum install ansible -y
   # install git & nginx
   sudo yum install -y git nginx
   # install nodejs
@@ -54,4 +57,22 @@ ngnix config based on repo changes.
  ```sh
    cat <your_public_key_file> >> ~/.ssh/authorized_keys
 ```
-   
+
+#### Validating the setup
+###### repo ( https://github.com/wprabhakar/ashnik ) contains nginx.conf
+###### configure WebHook in the test repository to invoke  http://18.138.225.104/nginxconf_changed on push event
+<img src="https://github.com/wprabhakar/ansible-nodejs/blob/master/docs/GitHubWebHookConfiguration.png">
+
+###### edit nginx.conf and change the port to any port other than 80
+###### once the deployment is complete ( 1-2 minutes ), try accessing http://3.0.201.72  ( not available )
+
+###### edit nginx.conf and change the port to 80
+###### once the deployment is complete ( 1-2 minutes ), try accessing http://3.0.201.72 ( loads index.html )
+##
+##### End of Validation
+##
+##
+
+
+
+
