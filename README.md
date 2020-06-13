@@ -64,14 +64,13 @@ ngnix config based on repo changes.
 <img src="https://github.com/wprabhakar/ansible-nodejs/blob/master/docs/GitHubWebHookConfiguration.png">
 
 ###### edit nginx.conf and change the port to any port other than 80
-###### once the deployment is complete ( 1-2 minutes ), try accessing http://3.0.201.72  ( not available )
+###### once the deployment is complete ( 1-2 minutes ), try accessing http://3.0.201.72  ( not reachable )
 
 ###### edit nginx.conf and change the port to 80
-###### once the deployment is complete ( 1-2 minutes ), try accessing http://3.0.201.72 ( loads index.html )
-##
+###### once the deployment is complete ( 1-2 minutes ), try accessing http://3.0.201.72 ( reachable )
+######
 ##### End of Validation
-##
-##
+######
 
 
 
