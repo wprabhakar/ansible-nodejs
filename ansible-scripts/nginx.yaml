@@ -1,9 +1,11 @@
 ---
 - hosts: webserver1
   become: yes
+
   vars:
     temploc: /tmp/ashnik
     filename: /nginx.conf
+
   tasks:
     - name: Install git
       yum:
@@ -21,11 +23,19 @@
 
     - name: Download Nginx conf file
       shell: 'git clone --depth 1 https://github.com/wprabhakar/ashnik.git {{ temploc }}'
+
     - name: copy the nginx.conf file
       copy:
         src: "{{ temploc }}/nginx.conf"
         dest: /etc/nginx/nginx.conf
         remote_src: yes
+
+    - name: Ensure that NGINX is started at boot time
+      service:
+        name: nginx
+        enabled: yes
+        state: started
+
     - name: Start NGiNX
       service:
         name: nginx
