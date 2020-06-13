@@ -12,7 +12,7 @@ ngnix config based on repo changes.
 
 ## Setup Details
 
-####  Login to Ansible Server  
+####  Login to Ansible Server  ( 18.138.225.104 )
 #####  setup git, nginx, nodejs, pm2 and the ansible-nodejs application
 #####
 
@@ -34,6 +34,7 @@ ngnix config based on repo changes.
   cd ansible-nodejs
   # setup dependencies
   npm install
+  # ansible-scripts/inventory.txt contains the webserver connectivity details 
   # Setup routing of requests to NodeJS application
   sudo cp nginx-setup/nginx.conf /etc/nginx/nginx.conf
   # Ensure that both nginx & nodejs are started when the system boots up.
@@ -52,7 +53,7 @@ ngnix config based on repo changes.
   service nginx status
   pm2 logs
 ```
-#### Login to WebServer
+#### Login to WebServer ( 3.0.201.72 )
 
  ```sh
    cat <your_public_key_file> >> ~/.ssh/authorized_keys
