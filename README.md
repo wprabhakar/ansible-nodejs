@@ -16,7 +16,7 @@ ngnix config based on repo changes.
 #####  setup git, nginx, nodejs, pm2 and the ansible-nodejs application
 #####
 
-##
+
  ```sh
   # install ansible
   sudo yum install epel-release -y
@@ -42,7 +42,7 @@ ngnix config based on repo changes.
 
 #### Setup AnsibleServer's public key on WebServer
 ##### Generate SSH key in Ansible Server
-##
+
  ```sh
   ssh-keygen -t rsa
   # manually copy the public key ( ~/.ssh/ida_rsa.pub ) to WebServer
@@ -53,7 +53,7 @@ ngnix config based on repo changes.
   pm2 logs
 ```
 #### Login to WebServer
-##
+
  ```sh
    cat <your_public_key_file> >> ~/.ssh/authorized_keys
 ```
