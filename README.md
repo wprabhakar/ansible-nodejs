@@ -1,11 +1,8 @@
 ## Objective:
 1. Store configuration files/parameters in repo like Git.
-2. Automation tools like Jenkins/Ansible need to continuously check the changes in repo and
-pickup the change in config file.
-3. Based on the configuration, automation tool needs to check if ngnix is already running in
-AWS cloud or not.
-4. Use Existing AWS Vm :- Install nginx on the instance and then apply the new changes in
-ngnix config based on repo changes.
+2. Trigger automatic deployment when the repository has new commits.
+3. Install nginx using automated tools ( if not installed )
+4. Update the nginx configuration and restart
 
 ## Solution
 <img src="https://github.com/wprabhakar/ansible-nodejs/blob/master/docs/Solution.png">
