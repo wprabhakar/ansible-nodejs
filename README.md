@@ -8,7 +8,7 @@ AWS cloud or not.
 ngnix config based on repo changes.
 
 ## Solution
-<img src="https://github.com/wprabhakar/ansible-nodejs/blob/master/docs/Solution.svg">
+<img src="https://github.com/wprabhakar/ansible-nodejs/blob/master/docs/Solution.png">
 
 ## Setup Details
 
